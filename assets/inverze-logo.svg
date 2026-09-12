@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="210" viewBox="0 0 720 210" role="img" aria-labelledby="title desc">
+  <title id="title">Inverze</title>
+  <desc id="desc">Inverze, by shilong</desc>
+  <defs>
+    <linearGradient id="logoLine" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#202629"/>
+      <stop offset="0.52" stop-color="#55787b"/>
+      <stop offset="1" stop-color="#202629"/>
+    </linearGradient>
+  </defs>
+  <text x="360" y="116" text-anchor="middle" fill="#172022" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="92" font-weight="650" letter-spacing="-4">Inverze</text>
+  <path d="M214 145 H506" stroke="url(#logoLine)" stroke-width="3" stroke-linecap="round"/>
+  <text x="360" y="178" text-anchor="middle" fill="#6d7779" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="22" letter-spacing="5">@SHILONG</text>
+</svg>

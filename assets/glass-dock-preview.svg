@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Inverze Glass Dock preview</title>
+  <desc id="desc">A blurred glass Chrome new-tab page with Google search and an empty shortcut dock.</desc>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173438"/>
+      <stop offset="0.45" stop-color="#596c76"/>
+      <stop offset="0.72" stop-color="#a9abb8"/>
+      <stop offset="1" stop-color="#234247"/>
+    </linearGradient>
+    <radialGradient id="light" cx="58%" cy="27%" r="58%">
+      <stop offset="0" stop-color="#eee9ee" stop-opacity=".76"/>
+      <stop offset=".52" stop-color="#a7a8b3" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#172426" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="42"/></filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#061012" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1440" height="900" fill="url(#base)"/>
+  <ellipse cx="760" cy="235" rx="600" ry="330" fill="url(#light)" filter="url(#blur)"/>
+  <ellipse cx="1180" cy="650" rx="440" ry="240" fill="#1f6462" opacity=".42" filter="url(#blur)"/>
+  <rect width="1440" height="900" fill="#0a1112" opacity=".12"/>
+  <g font-family="Avenir Next, Helvetica Neue, Arial, sans-serif">
+    <text x="54" y="62" fill="#ffffff" font-size="25" font-weight="650">Inverze</text>
+    <text x="55" y="83" fill="#e8eeee" opacity=".48" font-size="12" letter-spacing="2">@shilong</text>
+    <text x="1335" y="62" text-anchor="end" fill="#f5f6f6" opacity=".7" font-size="14">22:40</text>
+    <text x="720" y="350" text-anchor="middle" fill="#ffffff" font-size="78" font-weight="650">Google</text>
+    <rect x="410" y="388" width="620" height="68" rx="34" fill="#172326" fill-opacity=".46" stroke="#ffffff" stroke-opacity=".24" filter="url(#shadow)"/>
+    <text x="440" y="431" fill="#ffffff" font-size="24" font-weight="600">G</text>
+    <text x="486" y="431" fill="#eef2f2" fill-opacity=".54" font-size="17">搜索你想知道的世界…</text>
+    <circle cx="986" cy="422" r="20" fill="#ffffff" fill-opacity=".13"/>
+    <path d="M981 416a7 7 0 1 0 5 12l7 7" fill="none" stroke="#ffffff" stroke-opacity=".8" stroke-width="2.4" stroke-linecap="round"/>
+    <rect x="470" y="728" width="500" height="84" rx="22" fill="#101a1c" fill-opacity=".48" stroke="#ffffff" stroke-opacity=".18" filter="url(#shadow)"/>
+    <text x="720" y="778" text-anchor="middle" fill="#ffffff" fill-opacity=".6" font-size="15">还没有入口，打开设置添加快捷网站</text>
+  </g>
+</svg>

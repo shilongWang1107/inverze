@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Inverze",
+  "version": "1.9.0",
+  "description": "A quiet, monochrome glass-style new tab page with an editable dock.",
+  "permissions": ["storage", "favicon"],
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "action": {
+    "default_title": "Inverze"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

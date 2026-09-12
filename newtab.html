@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#151719" />
+    <title>Inverze</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <div class="brand-signature" aria-label="Inverze，由 shilong 制作">
+        <span class="brand-name">Inverze</span>
+        <span class="brand-byline">@shilong</span>
+      </div>
+
+      <div class="topbar-right" aria-label="当前时间与设置">
+        <span id="clock" class="topbar-clock">--:--</span>
+        <button id="open-settings" class="icon-button floating-settings" type="button" aria-label="打开设置" title="设置">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z"/><path d="m19.1 13.1 1.2.9-1.5 2.6-1.4-.6a7.6 7.6 0 0 1-1.9 1.1l-.2 1.5h-3l-.2-1.5a7.6 7.6 0 0 1-1.9-1.1l-1.4.6-1.5-2.6 1.2-.9a7.7 7.7 0 0 1 0-2.2l-1.2-.9 1.5-2.6 1.4.6a7.6 7.6 0 0 1 1.9-1.1l.2-1.5h3l.2 1.5a7.6 7.6 0 0 1 1.9 1.1l1.4-.6 1.5 2.6-1.2.9a7.7 7.7 0 0 1 0 2.2Z"/></svg>
+        </button>
+      </div>
+
+      <section class="hero" aria-label="搜索">
+        <div class="hero-title google-wordmark" aria-label="Google">
+          <span class="google-blue">G</span><span class="google-red">o</span><span class="google-yellow">o</span><span class="google-blue">g</span><span class="google-green">l</span><span class="google-red">e</span>
+        </div>
+
+        <form id="search-form" class="search-shell" autocomplete="off">
+          <button id="engine-toggle" class="engine-toggle" type="button" aria-label="选择搜索引擎" aria-expanded="false">
+            <span id="engine-symbol" class="engine-symbol">G</span>
+            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 9 5 5 5-5"/></svg>
+          </button>
+          <input id="query" name="query" type="search" placeholder="搜索你想知道的世界…" spellcheck="false" autofocus />
+          <button class="search-submit" type="submit" aria-label="搜索">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m16 16 4.2 4.2"/></svg>
+          </button>
+          <div id="engine-menu" class="engine-menu" role="menu" hidden></div>
+        </form>
+      </section>
+
+      <section class="dock-area" aria-label="快捷入口">
+        <nav id="dock" class="dock" aria-label="网站快捷入口"></nav>
+      </section>
+    </main>
+
+    <div id="settings-backdrop" class="modal-backdrop" hidden></div>
+    <section id="settings-modal" class="settings-modal" role="dialog" aria-modal="true" aria-labelledby="settings-title" hidden>
+      <div class="modal-header">
+        <div>
+          <p class="modal-kicker">PERSONAL SPACE</p>
+          <h1 id="settings-title">页面设置</h1>
+        </div>
+        <button id="close-settings" class="icon-button" type="button" aria-label="关闭设置">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+
+      <div class="settings-content">
+        <section class="settings-section">
+          <div class="section-title-row">
+            <div>
+              <h2>快捷入口</h2>
+              <p>拖动排序，最多添加 12 个入口。自动读取网站官方图标并转换为无彩色版本。</p>
+            </div>
+            <button id="editor-add" class="small-button" type="button">添加</button>
+          </div>
+          <div id="shortcut-editor" class="shortcut-editor"></div>
+        </section>
+
+        <section class="settings-section compact-section">
+          <div class="section-title-row">
+            <div>
+              <h2>背景</h2>
+              <p>默认使用柔和的抽象磨砂背景，也可以换成自己的图片。</p>
+            </div>
+          </div>
+          <div class="background-actions">
+            <label class="file-button">
+              更换背景
+              <input id="background-file" type="file" accept="image/*" />
+            </label>
+            <button id="reset-background" class="ghost-button" type="button">恢复抽象背景</button>
+          </div>
+          <div class="background-control">
+            <div class="background-control-head">
+              <label for="background-blur">磨玻璃强度</label>
+              <output id="background-blur-value" for="background-blur">16px</output>
+            </div>
+            <input id="background-blur" type="range" min="0" max="32" step="1" value="16" />
+          </div>
+        </section>
+      </div>
+
+      <div class="modal-footer">
+        <button id="reset-shortcuts" class="ghost-button danger-ghost" type="button">恢复默认入口</button>
+        <div class="modal-footer-actions">
+          <button id="cancel-settings" class="ghost-button" type="button">取消</button>
+          <button id="save-settings" class="primary-button" type="button">保存设置</button>
+        </div>
+      </div>
+    </section>
+
+    <template id="shortcut-row-template">
+      <div class="shortcut-row" draggable="true">
+        <span class="drag-handle" aria-hidden="true">⠿</span>
+        <input class="row-name" type="text" maxlength="24" placeholder="名称" />
+        <input class="row-url" type="url" placeholder="https://example.com" />
+        <button class="row-delete" type="button" aria-label="删除入口">×</button>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
