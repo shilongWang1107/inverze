@@ -355,13 +355,14 @@ function bindDragAndDrop() {
 
 async function initialize() {
   const stored = await storageGet(["shortcuts", "engine", "customBackground", "backgroundBlur", "storageVersion"]);
-  const shouldClearExistingShortcuts = stored.storageVersion !== STORAGE_VERSION;
-  state.shortcuts = shouldClearExistingShortcuts ? [] : (Array.isArray(stored.shortcuts) ? stored.shortcuts : DEFAULT_SHORTCUTS.map((item) => ({ ...item })));
+  const hasStoredShortcuts = Array.isArray(stored.shortcuts);
+  const shouldClearExistingShortcuts = !hasStoredShortcuts && stored.storageVersion !== STORAGE_VERSION;
+  state.shortcuts = hasStoredShortcuts ? stored.shortcuts : DEFAULT_SHORTCUTS.map((item) => ({ ...item }));
   state.engine = ENGINES[stored.engine] ? stored.engine : "google";
   state.customBackground = typeof stored.customBackground === "string" ? stored.customBackground : "";
   state.backgroundBlur = clampBackgroundBlur(stored.backgroundBlur);
   if (shouldClearExistingShortcuts) {
-    await storageSet({ shortcuts: [], storageVersion: STORAGE_VERSION });
+    await storageSet({ shortcuts: state.shortcuts, storageVersion: STORAGE_VERSION });
   }
   formatClock();
   window.setInterval(formatClock, 1000);
