@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/inverze-logo.svg" alt="Inverze" width="360" />
+  <img src="assets/inverze-logo1.svg" alt="Inverze" width="360" />
 </p>
 
 <p align="center">
