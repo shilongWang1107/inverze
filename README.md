@@ -2,6 +2,10 @@
   <img src="assets/inverze-logo.svg" alt="Inverze" width="360" />
 </p>
 
+<p align="center">
+  <img src="assets/inverze-badges.svg" alt="Version 1.9.0, MIT license, Buy Me a Coffee" width="900" />
+</p>
+
 <p align="center">A minimal glass new-tab experience for Chrome.</p>
 
 <p align="center">
@@ -10,48 +14,48 @@
 
 # Inverze
 
-Inverze 是一个轻量、无后台服务、可自定义的 Chrome 新标签页扩展。作者：shilong。
+Inverze is a lightweight, local-first and customizable Chrome new-tab extension by shilong.
 
-## 特性
+## Features
 
-- 磨砂玻璃背景，可上传图片并在设置中调节 0–32px 模糊强度
-- 经典 Google 标题与 Google / Bing 搜索切换
-- Dock 根据入口数量自动调整宽度，最多支持 12 个网址
-- 自动读取网站官方 favicon，并统一转换为无彩色高对比图标
-- 支持添加、删除、编辑和拖动排序快捷入口
-- 入口数据和背景图只保存在本地 Chrome 存储中
+- Frosted-glass background with image upload and a 0–32px blur control
+- Classic Google wordmark with Google / Bing search switching
+- An adaptive dock that supports up to 12 websites
+- Official website favicons converted into high-contrast monochrome icons
+- Add, edit, delete and drag to reorder shortcuts
+- Shortcut data and backgrounds stored locally in Chrome
 
-## 安装
+## Installation
 
-1. 下载或克隆本仓库。
-2. 打开 Chrome，访问 `chrome://extensions`。
-3. 开启右上角“开发者模式”。
-4. 点击“加载已解压的扩展程序”。
-5. 选择本项目根目录。
-6. 新建标签页即可使用。
+1. Download or clone this repository.
+2. Open Chrome and visit `chrome://extensions`.
+3. Enable **Developer mode**.
+4. Click **Load unpacked**.
+5. Select the project root.
+6. Open a new tab.
 
-## 使用
+## Usage
 
-点击右上角设置按钮，可以：
+Use the top-right settings button to:
 
-- 上传或恢复背景
-- 调节磨玻璃强度
-- 添加、编辑、删除快捷入口
-- 拖动快捷入口调整顺序
+- Upload or restore the background
+- Adjust the frosted-glass blur strength
+- Add, edit and delete shortcuts
+- Drag shortcuts to reorder them
 
-搜索框左侧可以在 Google 和 Bing 之间切换。上传的背景图会在浏览器本地自动压缩后保存，不会上传到本项目或第三方服务器。
+Use the search-engine control on the left side of the search field to switch between Google and Bing. Uploaded images are compressed and stored locally in the browser; they are not uploaded to this project or a third-party server.
 
-## 项目结构
+## Project structure
 
-- `manifest.json`：Chrome Manifest V3 配置
-- `newtab.html`：新标签页结构与设置面板
-- `styles.css`：磨砂玻璃、搜索框和 Dock 样式
-- `app.js`：搜索、存储、背景处理和快捷入口逻辑
-- `assets/`：项目 logo 与首页效果预览
+- `manifest.json` — Chrome Manifest V3 configuration
+- `newtab.html` — new-tab structure and settings panel
+- `styles.css` — glass background, search field and dock styles
+- `app.js` — search, storage, background and shortcut logic
+- `assets/` — logo, badges and homepage preview
 
-## 隐私
+## Privacy
 
-本项目不包含账号、邮箱、密码、Token 或个人网址。快捷入口、背景图和设置只写入当前浏览器的 `chrome.storage.local`。搜索提交后会按用户选择跳转到 Google 或 Bing。
+This repository contains no accounts, email addresses, passwords, tokens or personal URLs. Shortcuts, backgrounds and settings are stored in the current browser's `chrome.storage.local`. Search submissions navigate to Google or Bing according to the selected engine.
 
 ## License
 
