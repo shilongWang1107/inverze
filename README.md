@@ -3,7 +3,9 @@
 </p>
 
 <p align="center">
-  <img src="assets/inverze-badges.svg" alt="Version 1.9.0, MIT license, Buy Me a Coffee" width="600" />
+  <img src="https://img.shields.io/badge/version-v1.9.0-2188ff?style=flat-square" alt="Version v1.9.0" />
+  <img src="https://img.shields.io/badge/license-MIT-2da44e?style=flat-square" alt="MIT License" />
+  <img src="https://img.shields.io/badge/sponsor-Buy%20Me%20a%20Coffee-e8792f?style=flat-square&logo=buymeacoffee&logoColor=white" alt="Buy Me a Coffee" />
 </p>
 
 <p align="center">A minimal glass new-tab experience for Chrome.</p>
