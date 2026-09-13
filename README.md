@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/inverze-badges.svg" alt="Version 1.9.0, MIT license, Buy Me a Coffee" width="900" />
+  <img src="assets/inverze-badges.svg" alt="Version 1.9.0, MIT license, Buy Me a Coffee" width="600" />
 </p>
 
 <p align="center">A minimal glass new-tab experience for Chrome.</p>
