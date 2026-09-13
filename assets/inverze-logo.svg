@@ -1,14 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="210" viewBox="0 0 720 210" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="220" viewBox="0 0 720 220" role="img" aria-labelledby="title desc">
   <title id="title">Inverze</title>
   <desc id="desc">Inverze, by shilong</desc>
   <defs>
     <linearGradient id="logoLine" x1="0" x2="1" y1="0" y2="0">
-      <stop offset="0" stop-color="#202629"/>
-      <stop offset="0.52" stop-color="#55787b"/>
-      <stop offset="1" stop-color="#202629"/>
+      <stop offset="0" stop-color="#55d4dc"/>
+      <stop offset="0.52" stop-color="#f5ffff"/>
+      <stop offset="1" stop-color="#55d4dc"/>
     </linearGradient>
   </defs>
-  <text x="360" y="116" text-anchor="middle" fill="#172022" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="92" font-weight="650" letter-spacing="-4">Inverze</text>
-  <path d="M214 145 H506" stroke="url(#logoLine)" stroke-width="3" stroke-linecap="round"/>
-  <text x="360" y="178" text-anchor="middle" fill="#6d7779" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="22" letter-spacing="5">@SHILONG</text>
+  <rect x="10" y="10" width="700" height="200" rx="30" fill="#11191f" stroke="#416e76" stroke-width="2"/>
+  <circle cx="76" cy="100" r="28" fill="none" stroke="#55d4dc" stroke-width="3"/>
+  <path d="M76 72v56M48 100h56" stroke="#f5ffff" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="76" cy="100" r="6" fill="#55d4dc"/>
+  <text x="132" y="117" fill="#ffffff" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="86" font-weight="700" letter-spacing="-3">Inverze</text>
+  <path d="M132 143 H588" stroke="url(#logoLine)" stroke-width="3" stroke-linecap="round"/>
+  <text x="132" y="181" fill="#c5d1d4" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="500" letter-spacing="4">@SHILONG  /  GLASS NEW TAB</text>
 </svg>
